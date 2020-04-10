@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Temperature Convertor</title>
+    </h:head>
+    <h:body>
+        <h1>Temperature Convertor</h1>
+        
+        <h2>Enter the temperature to convert below, then click calculate</h2> 
+        
+        <f:view>
+            <h:form>
+               <p>Enter Temperature to Convert:</p>
+               
+                <h:inputText id="userInput" maxlength="4" size="4" value="#{convertorDetails.userInput}" />
+                        <br/><br/>
+                    <p>Convert from:</p>
+                        <h:selectOneMenu id="tempONe" value="#{convertorDetails.tempOne}">
+                          <f:selectItem itemValue="Celsius" itemLabel="Celsius" />
+                          <f:selectItem itemValue="Fahrenheit" itemLabel="Fahrenheit" />
+                          <f:selectItem itemValue="Kelvin" itemLabel="Kelvin" />
+                        </h:selectOneMenu>
+                        <br/>                 
+                    <p>Convert to:</p>
+                        <h:selectOneMenu value="#{convertorDetails.tempTwo}">
+                          <f:selectItem itemValue="Celsius" itemLabel="Celsius" />
+                          <f:selectItem itemValue="Fahrenheit" itemLabel="Fahrenheit" />
+                          <f:selectItem itemValue="Kelvin" itemLabel="Kelvin" />
+                        </h:selectOneMenu>
+                        <br/><br/>
+                <h:commandButton value="Calculate" action="rightAnswer"/>
+            </h:form>
+        </f:view>        
+    </h:body>
+</html>
+
